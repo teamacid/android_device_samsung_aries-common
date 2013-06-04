@@ -30,6 +30,10 @@ ifeq ($(TARGET_DEVICE),fascinatemtd)
     LOCAL_CFLAGS += -DHAVE_FLASH
 endif
 
+ifeq ($(TARGET_DEVICE),galaxys4gmtd)
+    LOCAL_CFLAGS += -DFFC_FLIPPED
+endif
+
 include $(BUILD_SHARED_LIBRARY)
 
 endif
